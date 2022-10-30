@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    font: 500 22px "Roboto";
+}
+
+$border-color: linear-gradient(#319CFF, #6ADBFF);
+$background-color: rgba(255, 255, 255, 0.85);
+$rectangle-color: rgba(169, 240, 255, 0.2);
+$red: rgba(255, 0, 0, 1);
+
+.back {
+    position: absolute;
+    margin-top: 1%;
+    margin-left: 40%;
+    width: 351px;
+    height: 640px;
+    background: $border-color;
+    border-radius: 40px;
+
+    .background {
+        width: 329px;
+        height: 618px;
+        margin-top: 11px;
+        background: $background-color;
+        position: absolute;
+        margin-left: 3%;
+        border-radius: 35px;
+
+        .heder {
+            display: flex;
+
+            .elem {
+                background-image: url(./assets/darhboard.svg);
+                width: 24px;
+                height: 24px;
+                margin-top: 36px;
+                margin-left: 19px;
+            }
+
+            .scientific {
+                background-image: url(./assets/SCIENTIFIC.svg);
+                width: 116px;
+                height: 16px;
+                margin-top: 40px;
+                margin-left: 18px;
+            }
+
+            .tema {
+                background-image: url(./assets/Subtract.svg);
+                width: 17px;
+                height: 19px;
+                margin-left: 118px;
+                margin-top: 40px;
+            }
+        }
+
+        .rectangle {
+            height: 54px;
+            background-color: $rectangle-color;
+            margin-top: 210px;
+            display: flex;
+            justify-content: space-around;
+
+            .clock {
+                background-image: url(./assets/Time.svg);
+                width: 32px;
+                height: 32px;
+                margin-top: 9px;
+            }
+
+            .arrow {
+                background-image: url(./assets/Arrow_top.svg);
+                width: 32px;
+                height: 26px;
+                margin-top: 16px;
+            }
+
+            .c {
+                color: $red;
+                font-size: 30px;
+                margin-top: 7px;
+            }
+
+            .delete {
+                background-image: url(./assets/Group\ 2.svg);
+                width: 56px;
+                height: 37px;
+                margin-top: 7px;
+            }
+
+            .reverse {
+                background-image: url(./assets/Group\ 1.svg);
+                width: 33px;
+                height: 28px;
+                margin-top: 12px;
+            }
+        }
+
+        .buttons {
+
+            .trigonometria,
+            .operatory,
+            .numbers,
+            .numbers2,
+            .numbers3,
+            .numbers4 {
+                height: 54px;
+                display: flex;
+                justify-content: space-around;
+                font-size: 30px;
+
+            }
+
+            .trigonometria {
+                margin-top: 10px;
+                margin-bottom: -10px;
+            }
+
+            .numbers4 {
+                margin-top: -10px;
+            }
+        }
+    }
+}
