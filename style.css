@@ -5,107 +5,80 @@
 }
 
 .back {
-  position: absolute;
-  margin-top: 1%;
-  margin-left: 40%;
+  margin: 50px auto;
   width: 351px;
-  height: 640px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#319CFF), to(#6ADBFF));
-  background: linear-gradient(#319CFF, #6ADBFF);
+  height: 610px;
+  background: rgb(202, 234, 254);
+  color: rgb(0, 0, 0);
   border-radius: 40px;
+  -webkit-box-shadow: 4px 4px 4px #4f4f4f;
+          box-shadow: 4px 4px 4px #4f4f4f;
+  border: 10px solid #319CFF;
 }
-.back .background {
-  width: 329px;
-  height: 618px;
-  margin-top: 11px;
-  background: rgba(255, 255, 255, 0.85);
-  position: absolute;
-  margin-left: 3%;
-  border-radius: 35px;
-}
-.back .background .heder {
+.back .heder {
+  margin-left: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 310px;
+  margin-top: 30px;
 }
-.back .background .heder .elem {
-  background-image: url(./assets/darhboard.svg);
-  width: 24px;
-  height: 24px;
-  margin-top: 36px;
-  margin-left: 19px;
-}
-.back .background .heder .scientific {
+.back .heder .scientific {
   background-image: url(./assets/SCIENTIFIC.svg);
   width: 116px;
   height: 16px;
-  margin-top: 40px;
-  margin-left: 18px;
 }
-.back .background .heder .tema {
+.back .heder .tema {
   background-image: url(./assets/Subtract.svg);
   width: 17px;
   height: 19px;
-  margin-left: 118px;
-  margin-top: 40px;
 }
-.back .background .rectangle {
-  height: 54px;
-  background-color: rgba(169, 240, 255, 0.2);
-  margin-top: 210px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+.back .display {
+  height: 120px;
+  padding: 10px;
+  display: -ms-grid;
+  display: grid;
+  justify-items: end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  margin-bottom: 20px;
 }
-.back .background .rectangle .clock {
-  background-image: url(./assets/Time.svg);
-  width: 32px;
-  height: 32px;
-  margin-top: 9px;
-}
-.back .background .rectangle .arrow {
-  background-image: url(./assets/Arrow_top.svg);
-  width: 32px;
-  height: 26px;
-  margin-top: 16px;
-}
-.back .background .rectangle .c {
-  color: rgb(255, 0, 0);
-  font-size: 30px;
-  margin-top: 7px;
-}
-.back .background .rectangle .delete {
-  background-image: url(./assets/Group\ 2.svg);
-  width: 56px;
-  height: 37px;
-  margin-top: 7px;
-}
-.back .background .rectangle .reverse {
-  background-image: url(./assets/Group\ 1.svg);
-  width: 33px;
-  height: 28px;
-  margin-top: 12px;
-}
-.back .background .buttons .trigonometria,
-.back .background .buttons .operatory,
-.back .background .buttons .numbers,
-.back .background .buttons .numbers2,
-.back .background .buttons .numbers3,
-.back .background .buttons .numbers4 {
-  height: 54px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+.back .display p {
+  text-align: right;
   font-size: 30px;
 }
-.back .background .buttons .trigonometria {
-  margin-top: 10px;
-  margin-bottom: -10px;
+.back .buttons {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "clock c delte reverse" "square bracket-open bracket-close division" "seven eigth nine multi" "four five six minus" "one two three plus" "percent zero dot equal";
+  grid-gap: 7px;
+  justify-items: center;
 }
-.back .background .buttons .numbers4 {
-  margin-top: -10px;
+.back .btn {
+  width: 60px;
+  height: 60px;
+  background: rgb(202, 234, 254);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.back .btn .zero {
+  -ms-grid-row: 11;
+  -ms-grid-column: 3;
+  grid-area: zero;
+  width: 100%;
+}
+.back .btn:hover {
+  -webkit-filter: brightness(98%);
+          filter: brightness(98%);
 }
