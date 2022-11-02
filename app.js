@@ -99,13 +99,28 @@ document.querySelector(".buttons").addEventListener("click", (event) => {
                 break;
             case "x!":
                 let res = 1
-                for(let i = 1; i<=a; i++){
-                   res *= i
+                for (let i = 1; i <= a; i++) {
+                    res *= i
                 }
                 a = res
                 break;
         }
         finish = true
         display.textContent = a
+    }
+})
+
+const back = document.querySelector(".back")
+let count = 0
+
+document.querySelector(".tema").addEventListener("click", () => {
+    if (count % 2 == 0) {
+        back.style = "background:  rgba(0, 0, 0, 1)"
+        display.style = "color: rgb(202, 234, 254)"
+        count++
+    } else if (count % 2 == 1) {
+        back.style = "background:   rgb(202, 234, 254)"
+        display.style = "color: rgba(0, 0, 0, 1)"
+        count++
     }
 })
