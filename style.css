@@ -54,7 +54,7 @@
 .back .buttons {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "clock c delte reverse" "square bracket-open bracket-close division" "seven eigth nine multi" "four five six minus" "one two three plus" "percent zero dot equal";
+      grid-template-areas: "clock c change reverse" "square factorial stepen division" "seven eigth nine multi" "four five six minus" "one two three plus" "percent zero dot equal";
   grid-gap: 7px;
   justify-items: center;
 }

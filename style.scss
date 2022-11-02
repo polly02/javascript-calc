@@ -58,8 +58,8 @@ $text-color: rgba(0, 0, 0, 1);
     .buttons {
         display: grid;
         grid-template-areas:
-            "clock c delte reverse"
-            "square bracket-open bracket-close division"
+            "clock c change reverse"
+            "square factorial stepen division"
             "seven eigth nine multi"
             "four five six minus"
             "one two three plus"

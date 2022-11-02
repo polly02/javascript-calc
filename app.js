@@ -1,9 +1,10 @@
-let a = "" 
-let sign = "" 
+let a = ""
+let b = ""
+let sign = ""
 let finish = false
 
 const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "."]
-const operations = ["-", "+", "x", "/", "%", "(", ")"]
+const operations = ["-", "+", "x", "/", "%", "x!", "^", "rev", "√", "cl", "+/-"]
 
 let display = document.querySelector(".display p")
 
@@ -57,7 +58,7 @@ document.querySelector(".buttons").addEventListener("click", (event) => {
             case "-":
                 a = a - b
                 break;
-            case "*":
+            case "x":
                 a = a * b
                 break;
             case "/":
@@ -72,6 +73,36 @@ document.querySelector(".buttons").addEventListener("click", (event) => {
                 break;
             case "%":
                 a = a / 100
+                break;
+            case "rev":
+                a = +(a.split("").reverse().join(""))
+                break;
+            case "√":
+                a = Math.sqrt(a)
+                break;
+            case "cl":
+                const data = new Date(),
+                    day = data.getDate(),
+                    month = data.getMonth() + 1,
+                    year = data.getFullYear()
+                a = `${day}.${month}.${year}`;
+                break;
+            case "^":
+                a = a ** b
+                break;
+            case "+/-":
+                if (a === a) {
+                    a = -a
+                } else {
+                    a = a
+                }
+                break;
+            case "x!":
+                let res = 1
+                for(let i = 1; i<=a; i++){
+                   res *= i
+                }
+                a = res
                 break;
         }
         finish = true
