@@ -78,7 +78,7 @@ document.querySelector(".buttons").addEventListener("click", (event) => {
                 a = +(a.split("").reverse().join(""))
                 break;
             case "√":
-                a = Math.sqrt(a)
+                a = Math.sqrt(a).toFixed(10)
                 break;
             case "cl":
                 const data = new Date(),
