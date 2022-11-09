@@ -4,7 +4,7 @@ let sign = ""
 let finish = false
 
 const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "."]
-const operations = ["-", "+", "x", "/", "%", "x!", "^", "rev", "√", "cl", "+/-"]
+const operations = ["-", "+", "x", "/", "%", "x!", "^", "rev", "√", "date", "+/-"]
 
 let display = document.querySelector(".display p")
 
@@ -59,7 +59,7 @@ document.querySelector(".buttons").addEventListener("click", (event) => {
                 a = a - b
                 break;
             case "x":
-                a = a * b
+                a = (a * b)
                 break;
             case "/":
                 if (b === "0") {
@@ -69,18 +69,18 @@ document.querySelector(".buttons").addEventListener("click", (event) => {
                     sign = ""
                     return
                 }
-                a = a / b
+                a = (a / b)
                 break;
             case "%":
-                a = a / 100
+                a = (a / 100)
                 break;
             case "rev":
-                a = +(a.split("").reverse().join(""))
+                a = (a.split("").reverse().join(""))
                 break;
             case "√":
-                a = Math.sqrt(a).toFixed(10)
+                a = Math.sqrt(a)
                 break;
-            case "cl":
+            case "date":
                 const data = new Date(),
                     day = data.getDate(),
                     month = data.getMonth() + 1,
@@ -88,7 +88,7 @@ document.querySelector(".buttons").addEventListener("click", (event) => {
                 a = `${day}.${month}.${year}`;
                 break;
             case "^":
-                a = a ** b
+                a = (a ** b)
                 break;
             case "+/-":
                 if (a === a) {
@@ -115,8 +115,9 @@ let count = 0
 
 document.querySelector(".tema").addEventListener("click", () => {
     if (count % 2 == 0) {
-        back.style = "background:  rgba(0, 0, 0, 1)"
+        back.style = "background:   #183958"
         display.style = "color: rgb(202, 234, 254)"
+        document.querySelectorAll(".buttons .btn").style = "color: #33526f"
         count++
     } else if (count % 2 == 1) {
         back.style = "background:   rgb(202, 234, 254)"
