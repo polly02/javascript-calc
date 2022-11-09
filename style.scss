@@ -49,7 +49,7 @@ $text-color: rgba(0, 0, 0, 1);
         margin-bottom: 20px;
         
         p {
-            width: 334px;
+            width: 333px;
             text-align: right;
             font-size: 30px;
             overflow: hidden;
@@ -59,7 +59,7 @@ $text-color: rgba(0, 0, 0, 1);
     .buttons {
         display: grid;
         grid-template-areas:
-            "date c change reverse"
+            "date c change love"
             "square factorial stepen division"
             "seven eigth nine multi"
             "four five six minus"

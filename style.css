@@ -48,7 +48,7 @@
   margin-bottom: 20px;
 }
 .back .display p {
-  width: 334px;
+  width: 333px;
   text-align: right;
   font-size: 30px;
   overflow: hidden;
@@ -56,7 +56,7 @@
 .back .buttons {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "date c change reverse" "square factorial stepen division" "seven eigth nine multi" "four five six minus" "one two three plus" "percent zero dot equal";
+      grid-template-areas: "date c change love" "square factorial stepen division" "seven eigth nine multi" "four five six minus" "one two three plus" "percent zero dot equal";
   grid-gap: 7px;
   justify-items: center;
 }

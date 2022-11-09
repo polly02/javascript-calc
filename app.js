@@ -4,7 +4,7 @@ let sign = ""
 let finish = false
 
 const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "."]
-const operations = ["-", "+", "x", "/", "%", "x!", "^", "rev", "√", "date", "+/-"]
+const operations = ["-", "+", "x", "/", "%", "x!", "^", "√", "date", "+/-"]
 
 let display = document.querySelector(".display p")
 
@@ -16,13 +16,43 @@ function clearAll() {
     display.textContent = 0
 }
 
+function loveH() {
+    a = ""
+    b = ""
+    sign = ""
+    finish = false
+    display.textContent = "Hschool ❤"
+}
+
+function date() {
+    a = ""
+    b = ""
+    sign = ""
+    finish = false
+    const data = new Date(),
+        day = data.getDate(),
+        month = data.getMonth() + 1,
+        year = data.getFullYear()
+    display.textContent = `${day}.${month}.${year}`;
+}
+
 document.querySelector(".c").addEventListener("click", () => {
     clearAll()
+})
+
+document.querySelector(".love").addEventListener("click", () => {
+    loveH()
+})
+
+document.querySelector(".date").addEventListener("click", () => {
+    date()
 })
 
 document.querySelector(".buttons").addEventListener("click", (event) => {
     if (!event.target.classList.contains("btn")) return
     if (event.target.classList.contains("c")) return
+    if (event.target.classList.contains("love")) return
+    if (event.target.classList.contains("date")) return
 
     display.textContent = ""
 
@@ -74,18 +104,15 @@ document.querySelector(".buttons").addEventListener("click", (event) => {
             case "%":
                 a = (a / 100)
                 break;
-            case "rev":
-                a = (a.split("").reverse().join(""))
-                break;
             case "√":
+                if (a < 0) {
+                    display.textContent = "Oшибка"
+                    a = ""
+                    b = ""
+                    sign = ""
+                    return
+                }
                 a = Math.sqrt(a)
-                break;
-            case "date":
-                const data = new Date(),
-                    day = data.getDate(),
-                    month = data.getMonth() + 1,
-                    year = data.getFullYear()
-                a = `${day}.${month}.${year}`;
                 break;
             case "^":
                 a = (a ** b)
